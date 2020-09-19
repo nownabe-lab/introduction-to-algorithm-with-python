@@ -18,7 +18,6 @@ if change < 0:
 coins = [5000, 1000, 500, 100, 50, 10, 5, 1]
 
 for coin in coins:
-    r = change // coin
-    change %= coin
+    r, change = divmod(change, coin)
     print(f"{coin}: {r}")
 
